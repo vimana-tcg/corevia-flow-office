@@ -1,0 +1,33 @@
+{
+  "_comment": "Канонічний список AI-related crawlers (oновлювати кожні 3-6 міс)",
+  "_updated": "2026-05-29",
+
+  "allow_ai_search": [
+    { "ua": "GPTBot", "owner": "OpenAI", "purpose": "ChatGPT search citations" },
+    { "ua": "OAI-SearchBot", "owner": "OpenAI", "purpose": "ChatGPT search index" },
+    { "ua": "ChatGPT-User", "owner": "OpenAI", "purpose": "On-demand user fetch" },
+    { "ua": "ClaudeBot", "owner": "Anthropic", "purpose": "Claude search/answers" },
+    { "ua": "anthropic-ai", "owner": "Anthropic", "purpose": "Claude legacy crawler" },
+    { "ua": "Claude-Web", "owner": "Anthropic", "purpose": "claude.ai web search" },
+    { "ua": "PerplexityBot", "owner": "Perplexity", "purpose": "Perplexity answer engine" },
+    { "ua": "Perplexity-User", "owner": "Perplexity", "purpose": "On-demand user fetch" },
+    { "ua": "Google-Extended", "owner": "Google", "purpose": "Bard/Gemini training opt-in" },
+    { "ua": "Applebot", "owner": "Apple", "purpose": "Spotlight / Siri" },
+    { "ua": "Applebot-Extended", "owner": "Apple", "purpose": "Apple Intelligence" },
+    { "ua": "Bingbot", "owner": "Microsoft", "purpose": "Bing + Copilot" },
+    { "ua": "DuckDuckBot", "owner": "DuckDuckGo", "purpose": "DDG + assist mode" },
+    { "ua": "YandexBot", "owner": "Yandex", "purpose": "Yandex search + GenAI" },
+    { "ua": "facebookexternalhit", "owner": "Meta", "purpose": "Link previews FB/IG" },
+    { "ua": "Twitterbot", "owner": "X", "purpose": "Twitter cards + Grok" },
+    { "ua": "LinkedInBot", "owner": "LinkedIn", "purpose": "Link previews" }
+  ],
+
+  "block_training_scrapers": [
+    { "ua": "CCBot", "owner": "Common Crawl", "reason": "Used for LLM training, no search use" },
+    { "ua": "cohere-ai", "owner": "Cohere", "reason": "Training only" },
+    { "ua": "Bytespider", "owner": "ByteDance", "reason": "TikTok training, often abusive" },
+    { "ua": "ImagesiftBot", "owner": "ImageSift", "reason": "Image training" },
+    { "ua": "Diffbot", "owner": "Diffbot", "reason": "Commercial scraping" },
+    { "ua": "Omgili", "owner": "Webhose", "reason": "Resale of crawl data" }
+  ]
+}
