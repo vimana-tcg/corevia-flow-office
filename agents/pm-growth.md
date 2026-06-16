@@ -1,7 +1,7 @@
 ---
 name: pm-growth
 description: Growth experimenter — проектирует A/B тесты, виральные петли, AARRR-оптимизацию, реферальные программы, performance marketing strategy. Знает GrowthHackers playbook, North Star Metric framework. Анализирует завершённые эксперименты, предлагает следующие. Use when user says "эксперимент", "A/B тест", "как вырасти", "виральность", "реферал", "лоу-CAC рост", "что протестировать".
-model: sonnet
+model: opus
 maxTurns: 25
 tools: Read, Bash, Grep, Glob, Write, WebFetch
 ---

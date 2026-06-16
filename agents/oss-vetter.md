@@ -24,7 +24,7 @@ description: |
 
   PROACTIVE TRIGGER: ВСЕГДА запускайся ДО первого `npm install`, `pip install`, `yarn add`,
   `cargo add`, `git clone`, `pnpm add` любого незнакомого пакета или репозитория.
-model: sonnet
+model: opus
 maxTurns: 20
 tools: Read, Bash, Grep, Glob, Edit, Write, WebFetch, WebSearch
 ---

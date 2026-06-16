@@ -9,7 +9,7 @@ description: >-
   «уникальные цифры по стране X», «статистика экспорта/импорта», «факты для контента»,
   «сколько X импортирует страна Y», «данные госстатистики», «content data», «trade stats»,
   «official figures for article». НЕ путать с pm-research (тренды индустрии) и pm-niche-scout (ниши).
-model: sonnet
+model: opus
 tools: Read, Bash, Grep, Glob, Write, WebFetch, WebSearch
 ---
 

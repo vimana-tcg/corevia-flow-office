@@ -12,7 +12,7 @@ description: >
   "social media campaign", "smm orchestrator", "growth в соцсетях", "перформанс
   в соцсетях".
 tools: Read, Bash, Grep, Glob, Edit, Write, Agent, WebFetch, AskUserQuestion, TodoWrite
-model: sonnet
+model: opus
 maxTurns: 30
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: pm-niche-scout
 description: Niche expansion researcher. Ищет новые ниши для marketplace AI-ботов: поисковый спрос, конкурентный ландшафт, fit с существующим кодом, expected revenue. Готовит готовые niche-entries для добавления в каталог. Use when user says "новая ниша", "какие ниши добавить", "куда расширяться", "что ищут", "niche scout", "expansion".
-model: sonnet
+model: opus
 maxTurns: 25
 tools: Read, Bash, Grep, Glob, Write, WebFetch, WebSearch
 ---

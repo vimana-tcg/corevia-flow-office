@@ -10,7 +10,7 @@ description: >
   performance», «минус-слова из аналитики», «что не сработало в рекламе/SEO», «недельный
   разбор ключей».
 tools: Read, Bash, Grep, Glob, Edit, Write, WebFetch, Agent
-model: sonnet
+model: opus
 maxTurns: 20
 ---
 

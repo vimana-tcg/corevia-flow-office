@@ -1,7 +1,7 @@
 ---
 name: pm-conversation-intel
 description: Conversation Intelligence — анализирует ВСЕ диалоги ботов проекта (консультант, sales-боты, outreach-почтовые цепочки, support inbox) и извлекает паттерны. Классифицирует WIN/LOSS/NURTURE/SUPPORT, частые возражения, неотвеченные вопросы, признаки востребованных фич, реакции на цены. Главный «голос клиента» в PM-команде. Use when user says "что клиенты говорят", "анализ диалогов", "почему не покупают", "что просят", "возражения", "обратная связь".
-model: sonnet
+model: opus
 maxTurns: 25
 tools: Read, Bash, Grep, Glob, Write
 ---

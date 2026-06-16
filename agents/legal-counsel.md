@@ -101,5 +101,5 @@ Mutual / unilateral в зависимости от ситуации.
 
 ## Связи
 - Корпоративная структура → совместно с `@fin-cfo`
-- Compliance в коде → `@cso` skill для security аудита
+- Compliance в коде → `@qa-security` (security-аудит кода)
 - Контракты с клиентами → `@office-account-manager` (negotiation)

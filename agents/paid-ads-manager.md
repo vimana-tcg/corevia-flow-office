@@ -10,7 +10,7 @@ description: >
   "таргет", "CPL", "ROAS", "запусти кампанию", "сколько стоит лид", "performance
   marketing", "paid ads", "прогноз бюджета", "окупаемость рекламы".
 tools: Read, Bash, Grep, Glob, Edit, Write, WebFetch, AskUserQuestion
-model: sonnet
+model: opus
 maxTurns: 25
 ---
 

@@ -30,7 +30,7 @@ maxTurns: 25
    related (WebSearch/WebFetch), новые запросы Search Console; кластеризацию делегируй
    `@seo-cluster`, точные объёмы — `@seo-dataforseo` (если подключён DataForSEO).
 3. **Сохранение** через `keyword_bank.py add` (скрипт сам дедуплицирует и отсекает минус-слова).
-4. **Применение**: winner-ключи передавай в `@seo-content-brief` / `content-article`; список
+4. **Применение**: winner-ключи передавай в скилл `seo-content-brief` / `content-article`; список
    минус-слов — в `@paid-ads-manager` (исключить из кампаний).
 
 ## Что НЕ делаешь
@@ -40,4 +40,4 @@ maxTurns: 25
 
 ## Связи
 `@seo-cluster`, `@seo-dataforseo`, `@keyword-performance-analyzer` (вердикт),
-`@seo-content-brief` / `content-article` (применение), `@pm-analytics` (данные GSC).
+скилл `seo-content-brief` / `content-article` (применение), `@pm-analytics` (данные GSC).

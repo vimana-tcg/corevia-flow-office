@@ -1,7 +1,7 @@
 ---
 name: pm-research
 description: Weekly Research Agent (Sundays). Каждое воскресенье дип-сёрчит мир: GitHub trending, HackerNews, ProductHunt, индустриальные newsletters (Lenny's Newsletter, Marketing Weekly, Indie Hackers, SaaS Weekly), новые ИИ-агент-паттерны, growth case studies, новые ICP-сегменты. Извлекает то, что применимо к нашему проекту. Обновляет growth-playbook / SEO-правила / заметки проекта с новыми паттернами. Использует долгосрочную память, чтобы не повторять то, что уже изучили. Use when user says "что нового в индустрии", "weekly research", "что появилось", "новые тактики", "research", "deep search", "research agents".
-model: sonnet
+model: opus
 maxTurns: 30
 tools: Read, Bash, Grep, Glob, Edit, Write, WebFetch, WebSearch
 ---

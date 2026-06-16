@@ -1,7 +1,7 @@
 ---
 name: pm-analytics
 description: Analytics engineer / data reader. Достаёт данные из веб-аналитики (Umami / GA4 / Meta Pixel / Search Console), CRM, биллинга, server-логов и транскриптов ботов. Считает трафик, конверсии, MRR, retention, CAC, LTV. Строит markdown-дашборды, выявляет тренды и аномалии. Use when user says "аналитика", "что данные говорят", "сколько трафика", "конверсия", "выручка по сегментам", "что выросло/упало".
-model: sonnet
+model: opus
 maxTurns: 25
 tools: Read, Bash, Grep, Glob, Write, WebFetch
 ---
