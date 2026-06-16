@@ -35,7 +35,12 @@
 ## ✍️ Контент
 «напиши пост», «LinkedIn post», «X thread», «caption» → content-writer-social.
 «статья», «блог», «экспертный материал» → content-writer-longform.
-«шортс», «tiktok», «reels», «короткое видео» → video/shorts.
+«шортс», «tiktok», «reels», «короткое видео» → video-creator-shorts.
+
+## 🎬 Видео-монтаж (нужен ffmpeg — `bash scripts/setup-video.sh`)
+«нарежь видео», «сделай вертикальный ролик 9:16», «субтитры phrase-sync» → **video-render-vertical**.
+«cut-план», «как нарезать вирусно», «оценка удержания» → **mrbeast-montage** (без зависимостей).
+«сделай обложку», «thumbnail», «превью для ролика» → **mrbeast-thumbnail** (вырезка лица — опц. Replicate).
 
 ## 💰 Финансы
 «сколько денег», «runway», «P&L», «юнит-экономика», «бюджет», «MRR/churn» → fin-команда (CFO, бухгалтер, метрики).

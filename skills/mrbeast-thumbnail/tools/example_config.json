@@ -1,0 +1,22 @@
+{
+  "size": [1080, 1920],
+  "background": "examples/bg_dashboard_sample.jpg",
+  "bg_darken": 80,
+  "gradient": { "color": [8, 10, 32], "top": 195, "bottom": 55 },
+  "face": "examples/face_cutout_sample.png",
+  "face_height": 1660,
+  "face_dx": 255,
+  "face_shadow": true,
+  "texts": [
+    { "text": "100x",            "xy": [54, 118], "size": 250, "color": "yellow", "stroke": 15 },
+    { "text": "+ AUTOMATION",     "xy": [58, 398], "size": 78,  "color": "cyan",   "stroke": 7 },
+    { "text": "ОДНА",             "xy": [58, 556], "size": 92,  "color": "white",  "stroke": 9 },
+    { "text": "НАСТРОЙКА",        "xy": [58, 661], "size": 70,  "color": "white",  "stroke": 7 },
+    { "text": "ГОЛОСОМ",          "xy": [58, 756], "size": 92,  "color": "yellow", "stroke": 9 },
+    { "text": "Агент управляет",  "xy": [58, 900], "size": 50, "color": "white", "stroke": 5 },
+    { "text": "всей кампанией",   "xy": [58, 968], "size": 54, "color": "green", "stroke": 5 }
+  ],
+  "ellipses": [],
+  "output": "output/thumbnail.jpg",
+  "quality": 92
+}

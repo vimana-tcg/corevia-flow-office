@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MrBeast-style editing script (cut plan)",
+  "description": "Структура ролика: сцены hook→stakes→proof→loop→cta со слоем удержания. Скармливается движку рендера (montage.py).",
+  "type": "object",
+  "required": ["target_duration", "scenes"],
+  "properties": {
+    "target_duration": {"type": "number", "description": "Целевая длина ролика, сек"},
+    "platform": {"type": "string", "enum": ["reels", "tiktok", "shorts", "youtube_long"]},
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["idx", "type", "text", "duration", "visual"],
+        "properties": {
+          "idx": {"type": "integer"},
+          "type": {"type": "string", "enum": ["hook", "stakes", "proof", "explanation", "rehook", "cta"]},
+          "text": {"type": "string", "description": "Реплика дикции (verbatim из транскрипта)"},
+          "start": {"type": "number"},
+          "end": {"type": "number"},
+          "duration": {"type": "number", "description": "Длительность сцены, сек (цель 1.5-3.0)"},
+          "visual": {
+            "type": "object",
+            "required": ["mode"],
+            "properties": {
+              "mode": {"type": "string", "enum": ["live", "freeze", "broll", "avatar"]},
+              "source_ts": {"type": ["number", "null"], "description": "Таймкод в исходнике для live/freeze"},
+              "broll_query": {"type": ["string", "null"], "description": "Поисковый запрос под чужой кадр (Pexels/Pixabay)"}
+            }
+          },
+          "zoom": {"type": "string", "enum": ["none", "punch", "kenburns"], "default": "none"},
+          "sfx": {"type": "string", "enum": ["none", "whoosh", "ding", "boom", "silence"], "default": "none"},
+          "caption_focus": {"type": ["string", "null"], "description": "Слово-акцент, подсветить цветом"}
+        }
+      }
+    }
+  }
+}
