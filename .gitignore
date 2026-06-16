@@ -1,0 +1,26 @@
+# SECRETS — never commit
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+**/secrets/**
+.corevia/config.json          # local user config (name/business/keys-presence)
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python / Node artifacts
+__pycache__/
+*.pyc
+node_modules/
+*.log
+
+# User-generated output (creatives, renders) — keep repo clean
+output/
+**/creatives/**
+*.mp4
+*.png.tmp

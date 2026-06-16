@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Corevia Flow Office — локальный профиль пользователя (.corevia/config.json)",
+  "description": "Создаётся мастером /setup. В git НЕ попадает (.gitignore).",
+  "type": "object",
+  "properties": {
+    "user_name": { "type": "string" },
+    "business_name": { "type": "string" },
+    "location": { "type": "string", "description": "город / страна" },
+    "niche": { "type": "string" },
+    "goal": { "type": "string", "enum": ["sales", "traffic", "brand", "content", "other"] },
+    "language": { "type": "string", "description": "ru / uk / en / ..." },
+    "connected": {
+      "type": "object",
+      "description": "какие сервисы подключены (true/false) — заполняет doctor",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "created_at": { "type": "string" },
+    "version": { "type": "string" }
+  },
+  "required": ["user_name", "goal", "language"]
+}
