@@ -4,9 +4,22 @@
 # Ничего НЕ ставит сам без спроса — показывает команду и ждёт.
 set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+AUTO=0; [ "${1:-}" = "--install" ] && AUTO=1   # bash setup-video.sh --install → ставить само (по согласию)
 
 say() { printf '%s\n' "$1"; }
 have() { command -v "$1" >/dev/null 2>&1; }
+
+try_install_ffmpeg() {
+  # пытается поставить ffmpeg доступным менеджером пакетов (с подтверждением)
+  local cmd=""
+  case "$(uname -s)" in
+    Darwin) have brew && cmd="brew install ffmpeg";;
+    Linux)  have apt && cmd="sudo apt install -y ffmpeg" || { have dnf && cmd="sudo dnf install -y ffmpeg"; };;
+  esac
+  [ -n "$cmd" ] || { say "   (авто-установка недоступна — поставьте вручную по ссылке выше)"; return 1; }
+  if [ "$AUTO" -eq 1 ]; then ans=y; else printf "   Установить ffmpeg сейчас (%s)? [y/N] " "$cmd"; read -r ans </dev/tty 2>/dev/null || ans=n; fi
+  case "$ans" in y|Y|yes|да) say "   ▶ $cmd"; eval "$cmd" && say "   ✅ ffmpeg установлен";; *) say "   Пропущено. Команда выше — поставьте когда удобно.";; esac
+}
 
 say "🎬 Проверка софта для видео-монтажа"
 say "────────────────────────────────────"
@@ -23,6 +36,7 @@ else
     *)      say "       скачайте с https://ffmpeg.org/download.html";;
   esac
   say "       (или статический бинарник в \$PATH). Потом запустите этот скрипт снова."
+  try_install_ffmpeg
 fi
 
 # --- Python ---
