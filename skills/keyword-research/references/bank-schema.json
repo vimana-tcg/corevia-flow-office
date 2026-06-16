@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Keyword Bank — keywords/<topic>.json",
+  "type": "object",
+  "required": ["topic", "locale", "keywords", "negatives"],
+  "properties": {
+    "topic": { "type": "string" },
+    "locale": { "type": "string", "description": "ru / uk / en / ..." },
+    "updated_at": { "type": "string" },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["keyword", "status"],
+        "properties": {
+          "keyword": { "type": "string" },
+          "source": { "type": "string", "description": "autocomplete | paa | gsc | cluster | manual" },
+          "intent": { "type": "string", "description": "informational | commercial | transactional | navigational" },
+          "cluster": { "type": "string" },
+          "volume": { "type": ["integer", "null"] },
+          "status": { "type": "string", "enum": ["new", "active", "winner", "loser"] },
+          "metrics": {
+            "type": "object",
+            "properties": {
+              "impressions": { "type": "integer" },
+              "clicks": { "type": "integer" },
+              "conversions": { "type": "integer" },
+              "spend": { "type": "number" }
+            }
+          },
+          "first_seen": { "type": "string" },
+          "last_updated": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "negatives": {
+      "type": "array",
+      "description": "минус-слова — то, что не сработало; в будущих операциях исключаются",
+      "items": {
+        "type": "object",
+        "required": ["keyword", "reason"],
+        "properties": {
+          "keyword": { "type": "string" },
+          "reason": { "type": "string" },
+          "date": { "type": "string" }
+        }
+      }
+    }
+  }
+}
