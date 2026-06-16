@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-UPSTREAM_URL="https://github.com/Corevia-Flow/corevia-flow-office.git"
+UPSTREAM_URL="https://github.com/vimana-tcg/corevia-flow-office.git"
 
 # Если форк — добавим upstream один раз
 if ! git remote | grep -q '^upstream$'; then
