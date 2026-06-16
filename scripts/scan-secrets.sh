@@ -32,9 +32,11 @@ declare -a FORBIDDEN_WORDS=(
 )
 
 fail=0
+# Безопасные IP (публичные DNS-резолверы, localhost, RFC-5737 doc-диапазоны) — не флагать
+SAFE_IP='8\.8\.8\.8|8\.8\.4\.4|1\.1\.1\.1|1\.0\.0\.1|127\.0\.0\.1|0\.0\.0\.0|192\.0\.2\.|198\.51\.100\.|203\.0\.113\.'
 echo "🔎 scan-secrets: проверяю $(echo "$FILES" | wc -l | tr -d ' ') файлов…"
 for pat in "${PATTERNS[@]}"; do
-  hits=$(echo "$FILES" | xargs grep -nEI "$pat" 2>/dev/null | grep -v '\.env\.example' || true)
+  hits=$(echo "$FILES" | xargs grep -nEI "$pat" 2>/dev/null | grep -v '\.env\.example' | grep -vE "$SAFE_IP" || true)
   if [ -n "$hits" ]; then echo "❌ СЕКРЕТ/IP [$pat]:"; echo "$hits" | head -5; fail=1; fi
 done
 for w in "${FORBIDDEN_WORDS[@]}"; do
