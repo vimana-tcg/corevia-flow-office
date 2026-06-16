@@ -13,24 +13,25 @@
 
 ---
 
-## 🚀 Быстрый старт (5 минут)
+## 🚀 Быстрый старт (одна команда)
 
 ```bash
-# 1. Установите Claude Code (если ещё нет): см. docs.claude.com/claude-code
-# 2. Заберите набор себе:
-git clone https://github.com/<ВАШ-АккаУНТ>/corevia-flow-office ~/corevia-flow-office
-cd ~/corevia-flow-office
-bash scripts/install.sh        # подключит агентов/скиллы к вашему Claude Code
+curl -fsSL https://raw.githubusercontent.com/vimana-tcg/corevia-flow-office/main/scripts/bootstrap.sh | bash
+```
+Это скачает набор и подключит **всех агентов + все скиллы** к вашему Claude Code.
 
-# 3. Откройте Claude Code в этой папке и напишите:
-/setup
+Или вручную:
+```bash
+git clone https://github.com/vimana-tcg/corevia-flow-office ~/corevia-flow-office
+cd ~/corevia-flow-office && bash scripts/install.sh
 ```
 
-`/setup` спросит простыми словами: как вас зовут, какой у вас бизнес, в каком городе,
-что хотите автоматизировать — и **по шагам** поможет получить и подключить ключи
-(OpenAI, Replicate, Canva, Meta, YouTube, Pexels и др.). Ничего знать заранее не нужно.
+Дальше — **перезапустите сессию Claude** (чтобы он увидел новых агентов) и напишите:
+- **`/tour`** — экскурсия простыми словами: как всё устроено, кто за что, схемы (см. [`docs/GUIDE.md`](docs/GUIDE.md)). Можно спросить «как работает X» и «кто у меня есть».
+- **`/setup`** — мастер: спросит про вас (имя/бизнес/город/цель) и по шагам подключит ключи (OpenAI, Replicate, Canva, Meta, YouTube, Pexels…). Ничего знать заранее не нужно.
+- **`/doctor`** — что уже подключено. **`bash scripts/setup-video.sh`** — софт для видео (ffmpeg).
 
-Проверить, что подключилось: `/doctor`.
+Кода знать НЕ нужно — пишите задачи обычными словами.
 
 ---
 
